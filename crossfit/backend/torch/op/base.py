@@ -72,7 +72,9 @@ class Predictor(Op):
             loader = SortedSeqLoader(
                 data[["input_ids", "attention_mask"]],
                 self.model,
-                progress_bar=self.create_progress_bar(len(data), partition_info) if self.progress_bar else None,
+                progress_bar=self.create_progress_bar(len(data), partition_info)
+                if self.progress_bar
+                else None,
                 initial_batch_size=self.batch_size,
             )
         else:
@@ -80,7 +82,9 @@ class Predictor(Op):
                 data[["input_ids", "attention_mask"]],
                 batch_size=self.batch_size,
                 padding_side=self.model.load_tokenizer().padding_side,
-                progress_bar=self.create_progress_bar(len(data), partition_info) if self.progress_bar else None,
+                progress_bar=self.create_progress_bar(len(data), partition_info)
+                if self.progress_bar
+                else None,
                 max_seq_len=self.model.max_seq_length(),
             )
         del data
