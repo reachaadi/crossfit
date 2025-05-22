@@ -1,9 +1,11 @@
-cudf-cu12>=24.4
-dask-cudf-cu12>=24.4
-cuml-cu12>=24.4
-pylibraft-cu12>=24.4
-raft-dask-cu12>=24.4
-dask-cuda>=24.4
+cudf-cu12==24.6.0
+dask-cudf-cu12==24.6.0
+cuml-cu12==24.6.0
+pylibraft-cu12==24.6.0
+raft-dask-cu12==24.6.0
+cuvs-cu12==24.6.0
+dask-cuda==24.6.0
+dask==2024.6.0
 torch>=2.0
 transformers>=4.0
 curated-transformers>=1.0
